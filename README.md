@@ -75,7 +75,10 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            animation: fall 8s infinite linear;
+            animation: fall 8s infinite linear; 
+            background-color: #f06292; /* Set a color */
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            border-radius: 50%; /* Makes circular confetti */
         }
         .btn {
             background-color: #e91e63;
@@ -261,12 +264,13 @@
     </style>
 </head>
 <body>
+       <div class="confetti-container" id="confettiContainer"></div>
     <div class="container">
         <h1>HAPPY BIRTHDAY AKANKSHA!🎉🎂💖</h1>
         <div class="birthday-message">
             Wishing you a day filled with joy, laughter, and everything you love and a year ahead that's even better than the last.
         </div>
-        <div id="countdown">Birthday Countdown: Loading...</div>
+        
 
         <div class="cake-container">
             <img src="cake.jpg" alt="Birthday Cake">
@@ -285,7 +289,6 @@
             <div class="photo-frame" style="--rotation: -2deg;" onclick="showMemory(3)">
                 <img src="AK3.jpg">
                 <div class="balloons" id="balloons"></div>
-                <div class="confetti-container" id="confettiContainer"></div>
             </div>
             <div class="photo-frame" style="--rotation: 4deg;" onclick="showMemory(4)">
                 <img src="AK1.jpg" alt="Birthday Memory">
@@ -325,26 +328,6 @@
     <audio id="blowSound" src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3"></audio>
 
     <script>
-        // Countdown Timer
-        const birthdayDate = new Date('March 17, 2025 00:00:00').getTime();
-        const countdownElement = document.getElementById("countdown");
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeLeft = birthdayDate - now;
-
-            if (timeLeft <= 0) {
-                countdownElement.innerHTML = "HAPPY BIRTHDAY AKANKSHA!";
-            } else {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-                countdownElement.innerHTML = `Birthday Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }
-        }
-        setInterval(updateCountdown, 1000);
-
         // Memory Viewer
         function showMemory(memoryId) {
             const memoryContainer = document.getElementById('memoryContainer');
@@ -404,19 +387,44 @@
     setTimeout(() => {
         this.style.opacity = 1;
     }, 3000);
+    }); 
+    
+    // More Confetti
+    document.getElementById('moreBtn').addEventListener('click', function() {
+    const confettiContainer = document.getElementById('confettiContainer');
+    
+    // Generate multiple confetti pieces
+    for(let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        
+        // Random position
+        confetti.style.left = Math.random() * 100 + '%';
+        
+        // Random animation duration
+        confetti.style.animationDuration = (Math.random() * 3 + 5) + 's';
+        
+        // Random colors
+        const colors = ['#e91e63', '#9c27b0', '#3f51b5', '#2196f3', '#ff9800', '#ffeb3b'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.backgroundColor = randomColor;
+        
+        // Random size
+        const size = Math.random() * 8 + 5;
+        confetti.style.width = size + 'px';
+        confetti.style.height = size + 'px';
+        
+        // Random rotation
+        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+        
+        confettiContainer.appendChild(confetti);
+        
+        // Remove confetti after animation completes
+        setTimeout(() => {
+            confetti.remove();
+        }, 8000);
+    }
     });
-
-        // More Confetti
-        document.getElementById('moreBtn').addEventListener('click', function() {
-            // Generate Confetti
-            const confettiContainer = document.querySelector('.confetti-container');
-            const confetti = document.createElement('div');
-            confetti.classList.add('confetti');
-            confetti.style.left = Math.random() * 100 + '%';
-            confetti.style.animationDuration = Math.random() * 3 + 5 + 's';
-            confettiContainer.appendChild(confetti);
-        });
-
         // Make a Wish Button
         document.getElementById('wishBtn').addEventListener('click', function() {
             const wishingWell = document.getElementById('wishingWell');

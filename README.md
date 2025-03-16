@@ -346,7 +346,7 @@
 
             if (memoryId === 1) {
                 title = "BIRTHDAY TOGETHER";
-                text = "17.03.204";
+                text = "17.03.2024";
                 imageSrc = "AK4.jpg";
             } else if (memoryId === 2) {
                 title = "SPECIAL MOMENTS";
@@ -361,7 +361,15 @@
                 text = "I was just looking at the pictures from our last meet and it brought back such great memories.";
                 imageSrc = "AK1.jpg";
             }
-
+            // Add flame blow functionality
+            document.getElementById('flame').addEventListener('click', function() {
+    const blowSound = document.getElementById('blowSound');
+    blowSound.play();
+    this.style.opacity = 0;
+    setTimeout(() => {
+        this.style.opacity = 1;
+    }, 3000);
+});
             memoryTitle.textContent = title;
             memoryText.textContent = text;
             memoryImage.src = imageSrc;

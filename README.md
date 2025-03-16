@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -632,4 +631,3 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         };
     </script>
 </body>
-</html>

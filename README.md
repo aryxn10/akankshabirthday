@@ -377,7 +377,7 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         <div id="countdown">Birthday Countdown: Loading...</div>
         
         <div class="cake-container">
-            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80" class="cake-img" alt="Birthday Cake">
+            <img src="https://unsplash.com/photos/a-birthday-cake-with-lit-candles-sitting-on-a-table-GZ44SmEfMps" alt="Birthday Cake">
             <div class="candle" style="left: 90px;">
                 <div class="flame" id="flame"></div>
             </div>

@@ -242,7 +242,7 @@
             <div class="photo-frame" style="--rotation: -2deg;" onclick="showMemory(3)">
                 <img src="AK3.jpg">
                 <div class="balloons" id="balloons"></div>
-<div class="confetti-container" id="confettiContainer"></div>
+                <div class="confetti-container" id="confettiContainer"></div>
             </div>
             <div class="photo-frame" style="--rotation: 4deg;" onclick="showMemory(4)">
                 <img src="AK1.jpg" alt="Birthday Memory">

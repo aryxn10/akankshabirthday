@@ -114,6 +114,17 @@
             transform: translateX(-50%);
             border-radius: 5px;
         }
+        .photo-frame {
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    transform: rotate(var(--rotation, 0deg)); /* Add this line */
+}
         .candle {
     position: absolute;
     width: 10px;

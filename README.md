@@ -1,8 +1,4 @@
-# Enhancing Your Birthday Website with Images and Interactivity
 
-I'll customize the birthday website with more images and interactive elements to make it even more special for Akanksha. Here's an enhanced version of the code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>

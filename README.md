@@ -12,7 +12,7 @@
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
             text-align: center;
-            background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-image: url('AK');
             background-size: cover;
             background-attachment: fixed;
         }

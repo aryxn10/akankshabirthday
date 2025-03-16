@@ -387,10 +387,10 @@ background-attachment: fixed; /* Image stays in place when scrolling */
                 <img src="AK4.jpg" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 3deg;" onclick="showMemory(2)">
-                <img src="AK5.jpg">
+                <img src="AK5.jpg" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: -2deg;" onclick="showMemory(3)">
-                <img src="AK3.jpg">
+                <img src="AK3.jpg" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 4deg;" onclick="showMemory(4)">
                 <img src="AK1.jpg" alt="Birthday Memory">
@@ -515,26 +515,12 @@ background-attachment: fixed; /* Image stays in place when scrolling */
             // Set to Akanksha's birthday - change this to the actual birthday
             const birthday = new Date("2025-03-17"); // Example date, replace with actual date
             const now = new Date();
-            
+
             // For this year's birthday
-            let thisYearBirthday = new Date(now.getFullYear(), birthday.getMonth(), birthday.getDate());
-            
-            // If this year's birthday has passed, calculate for next year
-            if (now > thisYearBirthday) {
-                thisYearBirthday = new Date(now.getFullYear() + 1, birthday.getMonth(), birthday.getDate());
+            let thisYearBirthday = new Date(now.getFullYear(), birthday.getMonth(), birthday.getDate()); 
             }
-            
+    
             const diff = thisYearBirthday - now;
-            
-            // Convert to days, hours, minutes, seconds
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('countdown').innerHTML = `Birthday Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-            
-            setTimeout(updateCountdown, 1000);
         }
         
         // Cake candle interaction

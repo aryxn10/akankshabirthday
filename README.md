@@ -12,7 +12,7 @@
             font-family: 'Arial', sans-serif;
             overflow-x: hidden;
             text-align: center;
-            background-image: url('AK');
+            background-image: url('AK.jpg');
             background-size: cover;
             background-attachment: fixed;
         }

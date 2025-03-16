@@ -432,3 +432,208 @@ I'll customize the birthday website with more images and interactive elements to
             <h3 class="memory-title" id="memoryTitle">Memory Title</h3>
             <p class="memory-text" id="memoryText">Memory description goes here.</p>
             <img id="memoryImage" src="" alt="
+<img id="memoryImage" src="" alt="Memory Image" style="max-width: 100%; margin-top: 15px; border-radius: 8px;">
+        </div>
+    </div>
+    
+    <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="blowSound" src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3"></audio>
+    
+    <script>
+        // Create balloon elements
+        function createBalloons() {
+            const colors = ['#e91e63', '#9c27b0', '#3f51b5', '#2196f3', '#ff9800'];
+            const balloonsContainer = document.getElementById('balloons');
+            
+            for (let i = 0; i < 30; i++) {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                balloon.style.left = `${Math.random() * 100}%`;
+                balloon.style.animationDuration = `${15 + Math.random() * 10}s`;
+                balloon.style.animationDelay = `${Math.random() * 5}s`;
+                balloonsContainer.appendChild(balloon);
+            }
+        }
+        
+        // Create confetti elements
+        function createConfetti() {
+            const colors = ['#e91e63', '#9c27b0', '#3f51b5', '#2196f3', '#ff9800', '#4caf50', '#8bc34a'];
+            const confettiContainer = document.getElementById('confetti');
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.width = `${5 + Math.random() * 10}px`;
+                confetti.style.height = `${5 + Math.random() * 10}px`;
+                confetti.style.opacity = Math.random();
+                confetti.style.animationDuration = `${5 + Math.random() * 10}s`;
+                confetti.style.animationDelay = `${Math.random() * 5}s`;
+                confettiContainer.appendChild(confetti);
+            }
+        }
+        
+        // Add more confetti
+        function addMoreConfetti() {
+            const colors = ['#e91e63', '#9c27b0', '#3f51b5', '#2196f3', '#ff9800', '#4caf50', '#8bc34a'];
+            const confettiContainer = document.getElementById('confetti');
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.width = `${5 + Math.random() * 10}px`;
+                confetti.style.height = `${5 + Math.random() * 10}px`;
+                confetti.style.opacity = Math.random();
+                confetti.style.animationDuration = `${5 + Math.random() * 10}s`;
+                confetti.style.animationDelay = `0s`;
+                confettiContainer.appendChild(confetti);
+            }
+        }
+        
+        // Memory functions
+        function showMemory(id) {
+            const memories = [
+                { title: "Birthday Celebrations", text: "Every year we celebrate with lots of fun and laughter!", image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
+                { title: "Special Moments", text: "Remember that time we had that amazing adventure? Memories we'll cherish forever!", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
+                { title: "Friendship Goals", text: "Friends who celebrate together, stay together! Happy birthday, Akanksha!", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
+                { title: "Happy Times", text: "Wishing you many more years of happiness and joy! May all your dreams come true.", image: "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" }
+            ];
+            
+            const memory = memories[id-1];
+            document.getElementById('memoryTitle').textContent = memory.title;
+            document.getElementById('memoryText').textContent = memory.text;
+            document.getElementById('memoryImage').src = memory.image;
+            
+            document.getElementById('memoryContainer').classList.add('active');
+        }
+        
+        function closeMemory() {
+            document.getElementById('memoryContainer').classList.remove('active');
+        }
+        
+        // Birthday countdown
+        function updateCountdown() {
+            // Set to Akanksha's birthday - change this to the actual birthday
+            const birthday = new Date("2026-01-01"); // Example date, replace with actual date
+            const now = new Date();
+            
+            // For this year's birthday
+            let thisYearBirthday = new Date(now.getFullYear(), birthday.getMonth(), birthday.getDate());
+            
+            // If this year's birthday has passed, calculate for next year
+            if (now > thisYearBirthday) {
+                thisYearBirthday = new Date(now.getFullYear() + 1, birthday.getMonth(), birthday.getDate());
+            }
+            
+            const diff = thisYearBirthday - now;
+            
+            // Convert to days, hours, minutes, seconds
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').innerHTML = `Birthday Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            setTimeout(updateCountdown, 1000);
+        }
+        
+        // Cake candle interaction
+        function handleCakeClick() {
+            const flame = document.getElementById('flame');
+            const blowSound = document.getElementById('blowSound');
+            
+            if (flame.style.display !== 'none') {
+                flame.style.display = 'none';
+                blowSound.play();
+                addMoreConfetti();
+                
+                setTimeout(() => {
+                    alert("🎉 Happy Birthday, Akanksha! Your wish has been made! 🎉");
+                }, 500);
+                
+                // Relight candle after some time
+                setTimeout(() => {
+                    flame.style.display = 'block';
+                }, 10000);
+            }
+        }
+        
+        // Initialize the page
+        window.onload = function() {
+            createBalloons();
+            createConfetti();
+            updateCountdown();
+            
+            // Play button functionality
+            const playBtn = document.getElementById('playBtn');
+            const birthdaySong = document.getElementById('birthdaySong');
+            
+            playBtn.addEventListener('click', function() {
+                if (birthdaySong.paused) {
+                    birthdaySong.play();
+                    playBtn.textContent = "Pause Birthday Song";
+                } else {
+                    birthdaySong.pause();
+                    playBtn.textContent = "Play Birthday Song";
+                }
+            });
+            
+            // More confetti button
+            const moreBtn = document.getElementById('moreBtn');
+            moreBtn.addEventListener('click', addMoreConfetti);
+            
+            // Gift box click event
+            const giftBox = document.getElementById('giftBox');
+            const giftMessage = document.getElementById('giftMessage');
+            
+            giftBox.addEventListener('click', function() {
+                if (giftMessage.style.display === 'block') {
+                    giftMessage.style.display = 'none';
+                } else {
+                    giftMessage.style.display = 'block';
+                    addMoreConfetti();
+                }
+            });
+            
+            // Make a wish button
+            const wishBtn = document.getElementById('wishBtn');
+            const wishingWell = document.getElementById('wishingWell');
+            
+            wishBtn.addEventListener('click', function() {
+                if (wishingWell.style.display === 'none') {
+                    wishingWell.style.display = 'block';
+                    wishBtn.textContent = "Hide Wishes";
+                } else {
+                    wishingWell.style.display = 'none';
+                    wishBtn.textContent = "Make a Wish";
+                }
+            });
+            
+            // Submit wish
+            const submitWish = document.getElementById('submitWish');
+            const wishText = document.getElementById('wishText');
+            const wishesContainer = document.getElementById('wishesContainer');
+            
+            submitWish.addEventListener('click', function() {
+                if (wishText.value.trim() !== '') {
+                    const newWish = document.createElement('div');
+                    newWish.className = 'wish';
+                    newWish.innerHTML = `<strong>Guest:</strong> ${wishText.value}`;
+                    wishesContainer.prepend(newWish);
+                    wishText.value = '';
+                    
+                    addMoreConfetti();
+                }
+            });
+            
+            // Blow candle interaction
+            document.querySelector('.cake-img').addEventListener('click', handleCakeClick);
+        };
+    </script>
+</body>
+</html>

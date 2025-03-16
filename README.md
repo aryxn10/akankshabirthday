@@ -324,7 +324,7 @@
         </div>
     </div>
     
-    <audio id="birthdaySong" src="birthday-song.mp3"></audio>
+    <audio id="birthdaySong" src="birthday-song.mp3.mp3"></audio>
     <audio id="blowSound" src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3"></audio>
 
     <script>

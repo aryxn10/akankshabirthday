@@ -369,7 +369,7 @@
     setTimeout(() => {
         this.style.opacity = 1;
     }, 3000);
-    }
+    });
             memoryTitle.textContent = title;
             memoryText.textContent = text;
             memoryImage.src = imageSrc;

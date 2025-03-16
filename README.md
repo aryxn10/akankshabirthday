@@ -398,7 +398,7 @@ background-attachment: fixed; /* Image stays in place when scrolling */
                 <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 4deg;" onclick="showMemory(4)">
-                <img src="AK2.jpg" alt="Birthday Memory">
+                <img src="AK1.jpg" alt="Birthday Memory">
             </div>
         </div>
         

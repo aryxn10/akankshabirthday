@@ -369,9 +369,13 @@ background-attachment: fixed; /* Image stays in place when scrolling */
     <div class="confetti-container" id="confetti"></div>
     
     <div class="container">
-        <h1>Happy Birthday AKANKSHA!</h1>
-        <div class="birthday-message">
-            Wishing you an amazing day filled with joy, laughter, and wonderful memories!
+        <h1>HAPPY BIRTHDAY AKANKSHA!🎉🎂💖</h1>
+        <div class="birthday-message">   
+        On this special day, I just want to remind you how incredibly amazing you are. 
+        You bring so much joy, love, and light into my life, and I’m beyond grateful for you every single day.
+        May this year bring you endless happiness, success, and all the beautiful moments you deserve.
+        I promise to be by your side, celebrating you today and always.  
+        Here’s to more laughter, adventures, and unforgettable memories together! 🥂✨
         </div>
         
         <div id="countdown">Birthday Countdown: Loading...</div>
@@ -394,7 +398,7 @@ background-attachment: fixed; /* Image stays in place when scrolling */
                 <img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 4deg;" onclick="showMemory(4)">
-                <img src="https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Memory">
+                <img src="AK2.jpg" alt="Birthday Memory">
             </div>
         </div>
         

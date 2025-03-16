@@ -515,7 +515,7 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         // Birthday countdown
         function updateCountdown() {
             // Set to Akanksha's birthday - change this to the actual birthday
-            const birthday = new Date("2026-01-01"); // Example date, replace with actual date
+            const birthday = new Date("2025-03-17"); // Example date, replace with actual date
             const now = new Date();
             
             // For this year's birthday

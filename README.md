@@ -370,7 +370,8 @@ background-attachment: fixed; /* Image stays in place when scrolling */
     
     <div class="container">
         <h1>HAPPY BIRTHDAY AKANKSHA!🎉🎂💖</h1>
-        <div class="birthday-message">   
+        <div class="birthday-message">  
+        Wishing you a day filled with joy, laughter, and everything you love, and a year ahead thats even better than the last.
         </div>
         
         <div id="countdown">Birthday Countdown: Loading...</div>
@@ -400,11 +401,11 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         <div class="gift-box" id="giftBox"></div>
         <div class="gift-message" id="giftMessage">
             Dear Akanksha, On this special day, I just want to remind you how incredibly amazing you are. 
-        You bring so much joy, love, and light into my life, and I’m beyond grateful for you every single day.
-        May this year bring you endless happiness, success, and all the beautiful moments you deserve.
-        I promise to be by your side, celebrating you today and always.  
-        Here’s to more laughter, adventures, and unforgettable memories together! 🥂✨
-        </div>
+            You bring so much joy, love, and light into my life, and I’m beyond grateful for you every single day.
+            May this year bring you endless happiness, success, and all the beautiful moments you deserve.
+            I promise to be by your side, celebrating you today and always.
+            Here’s to more laughter, adventures, and unforgettable memories together! 🥂✨
+            </div>
         
         <button class="btn" id="playBtn">Play Birthday Song</button>
         <button class="btn" id="moreBtn">More Confetti!</button>
@@ -415,9 +416,6 @@ background-attachment: fixed; /* Image stays in place when scrolling */
             <button class="btn" id="submitWish">Submit Wish</button>
             
             <div class="wishes-container" id="wishesContainer">
-                <div class="wish">
-                    <strong>Mom & Dad:</strong> Happy birthday to our amazing daughter! We love you so much!
-                </div>
                 <div class="wish">
                     <strong>Best Friend:</strong> Cheers to another year of our crazy adventures! Happy birthday!
                 </div>

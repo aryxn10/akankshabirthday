@@ -114,6 +114,29 @@
             transform: translateX(-50%);
             border-radius: 5px;
         }
+        .candle {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: #ff9800;
+    z-index: 2;
+    border-radius: 5px;
+}
+.flame {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background-color: #ff5722;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: -20px;
+    left: -2.5px;
+    animation: flicker 0.5s infinite alternate;
+    box-shadow: 0 0 10px 5px rgba(255, 87, 34, 0.7);
+}
+@keyframes flicker {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.8; }
+}
         .gift-box:after {
             content: '';
             position: absolute;

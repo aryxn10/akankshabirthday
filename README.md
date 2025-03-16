@@ -168,6 +168,15 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        .cake-container {
+            position: relative;
+            max-width: 200px;
+            margin: 0 auto 20px;
+        }
+        .cake-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
         .photo-gallery {
             display: flex;
             flex-wrap: wrap;

@@ -324,7 +324,7 @@
         </div>
     </div>
 
-    <audio id="birthdaySong" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="birthdaySong" src="https://www.happybirthdaysong.cc/music/traditional/happy-birthday-to-you.mp3"></audio>
     <audio id="blowSound" src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3"></audio>
 
     <script>

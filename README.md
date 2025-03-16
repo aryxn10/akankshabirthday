@@ -387,10 +387,10 @@ background-attachment: fixed; /* Image stays in place when scrolling */
                 <img src="AK4.jpg" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 3deg;" onclick="showMemory(2)">
-                <img src="AK5.jpg" alt="Birthday Memory">
+                <img src="AK5.jpg">
             </div>
             <div class="photo-frame polaroid" style="--rotation: -2deg;" onclick="showMemory(3)">
-                <img src="AK3.jpg" alt="Birthday Memory">
+                <img src="AK3.jpg">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 4deg;" onclick="showMemory(4)">
                 <img src="AK1.jpg" alt="Birthday Memory">
@@ -508,19 +508,6 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         
         function closeMemory() {
             document.getElementById('memoryContainer').classList.remove('active');
-        }
-        
-        // Birthday countdown
-        function updateCountdown() {
-            // Set to Akanksha's birthday - change this to the actual birthday
-            const birthday = new Date("2025-03-17"); // Example date, replace with actual date
-            const now = new Date();
-
-            // For this year's birthday
-            let thisYearBirthday = new Date(now.getFullYear(), birthday.getMonth(), birthday.getDate()); 
-            }
-    
-            const diff = thisYearBirthday - now;
         }
         
         // Cake candle interaction

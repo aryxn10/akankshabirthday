@@ -385,10 +385,10 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         
         <div class="photo-gallery">
             <div class="photo-frame polaroid" style="--rotation: -5deg;" onclick="showMemory(1)">
-                <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Memory">
+                <img src="AK4.jpg" alt="Birthday Memory">
             </div>
             <div class="photo-frame polaroid" style="--rotation: 3deg;" onclick="showMemory(2)">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Birthday Memory">
+                <img src="AK5.jpg">
             </div>
             <div class="photo-frame polaroid" style="--rotation: -2deg;" onclick="showMemory(3)">
                 <img src="AK3.jpg">
@@ -493,9 +493,9 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         // Memory functions
         function showMemory(id) {
             const memories = [
-                { title: "Birthday Celebrations", text: "Every year we celebrate with lots of fun and laughter!", image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
-                { title: "Special Moments", text: "Remember that time we had that amazing adventure? Memories we'll cherish forever!", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
-                { title: "KEEP SMILING", text: "", image: "AK3.jpg" },
+                { title: "Birthday Celebrations", text: "17-03-2024", image: "AK4.jpg" },
+                { title: "Special Moments", text: "Remember that time we had that amazing time? Memories we'll cherish forever!", image: "AK5.jpg" },
+                { title: "KEEP SMILING", image: "AK3.jpg" },
                 { title: "LAST TIME TOGETHER", text: "Missing these days", image: "AK1.jpg" }
             ];
             

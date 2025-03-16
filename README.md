@@ -175,24 +175,6 @@
             gap: 10px;
             margin: 20px 0;
         }
-        .photo-frame {
-            width: 150px;
-            height: 150px;
-            border: 5px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            overflow: hidden;
-            border-radius: 10px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .photo-frame:hover {
-            transform: scale(1.1);
-        }
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         .memory-container {
             position: fixed;
             top: 0;
@@ -201,6 +183,7 @@
             height: 100%;
             background-color: rgba(0,0,0,0.8);
             z-index: 100;
+            display: flex; /* Add this line */
             justify-content: center;
             align-items: center;
             opacity: 0;
@@ -343,6 +326,15 @@
             const memoryText = document.getElementById('memoryText');
             const memoryImage = document.getElementById('memoryImage');
             let title, text, imageSrc;
+            .cake-container {
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto 20px;
+    }
+    .cake-container img {
+    width: 100%;
+    border-radius: 10px;
+    }
 
             if (memoryId === 1) {
                 title = "BIRTHDAY TOGETHER";
@@ -380,23 +372,32 @@
         function closeMemory() {
             document.getElementById('memoryContainer').classList.remove('active');
         }
-
         // Play Birthday Song
         document.getElementById('playBtn').addEventListener('click', function() {
-            const song = document.getElementById('birthdaySong');
-            song.play();
-        });
-
-        // More Confetti
-        document.getElementById('moreBtn').addEventListener('click', function() {
-            // Generate Confetti
-            const confettiContainer = document.querySelector('.confetti-container');
-            const confetti = document.createElement('div');
-            confetti.classList.add('confetti');
-            confetti.style.left = Math.random() * 100 + '%';
-            confetti.style.animationDuration = Math.random() * 3 + 5 + 's';
-            confettiContainer.appendChild(confetti);
-        });
+    const song = document.getElementById('birthdaySong');
+    song.play();
+    });
+   
+    // Flame blow effect
+    document.getElementById('flame').addEventListener('click', function() {
+    const blowSound = document.getElementById('blowSound');
+    blowSound.play();
+    this.style.opacity = 0;
+    setTimeout(() => {
+        this.style.opacity = 1;
+    }, 3000);
+    });
+    
+    // More Confetti
+    document.getElementById('moreBtn').addEventListener('click', function() {
+    // Generate Confetti
+    const confettiContainer = document.querySelector('.confetti-container');
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    confetti.style.left = Math.random() * 100 + '%';
+    confetti.style.animationDuration = Math.random() * 3 + 5 + 's';
+    confettiContainer.appendChild(confetti);
+    });
 
         // Make a Wish Button
         document.getElementById('wishBtn').addEventListener('click', function() {
@@ -423,5 +424,5 @@
             document.getElementById('giftMessage').style.display = 'block';
         });
     </script>
-</body>
-</html>
+    </body>
+    </html>

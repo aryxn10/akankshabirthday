@@ -190,6 +190,15 @@
             transition: opacity 0.3s;
             pointer-events: none;
         }
+    .cake-container {
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto 20px;
+    }
+    .cake-container img {
+    width: 100%;
+    border-radius: 10px;
+    }
         @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -326,16 +335,6 @@
             const memoryText = document.getElementById('memoryText');
             const memoryImage = document.getElementById('memoryImage');
             let title, text, imageSrc;
-            .cake-container {
-    position: relative;
-    max-width: 200px;
-    margin: 0 auto 20px;
-    }
-    .cake-container img {
-    width: 100%;
-    border-radius: 10px;
-    }
-
             if (memoryId === 1) {
                 title = "BIRTHDAY TOGETHER";
                 text = "17.03.2024";

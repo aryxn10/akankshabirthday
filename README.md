@@ -496,7 +496,7 @@ background-attachment: fixed; /* Image stays in place when scrolling */
                 { title: "Birthday Celebrations", text: "Every year we celebrate with lots of fun and laughter!", image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
                 { title: "Special Moments", text: "Remember that time we had that amazing adventure? Memories we'll cherish forever!", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
                 { title: "Friendship Goals", text: "Friends who celebrate together, stay together! Happy birthday, Akanksha!", image: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" },
-                { title: "Happy Times", text: "Wishing you many more years of happiness and joy! May all your dreams come true.", image: "https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" }
+                { title: "LAST TIME TOGETHER", text: "Missing these days", image: "AK1.jpg" }
             ];
             
             const memory = memories[id-1];

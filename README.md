@@ -370,7 +370,7 @@ background-attachment: fixed; /* Image stays in place when scrolling */
     
     <div class="container">
         <h1>HAPPY BIRTHDAY AKANKSHA!🎉🎂💖</h1>
-        <div class="birthday-message">  
+        <div class="birthday-message"> 
         Wishing you a day filled with joy, laughter, and everything you love, and a year ahead thats even better than the last.
         </div>
         
@@ -414,10 +414,9 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         <div id="wishingWell" style="display: none;">
             <textarea class="birthday-wish" id="wishText" placeholder="Write your birthday wish for Akanksha here..."></textarea>
             <button class="btn" id="submitWish">Submit Wish</button>
-            
+        
             <div class="wishes-container" id="wishesContainer">
-                <div class="wish">
-                    <strong>Best Friend:</strong> Cheers to another year of our crazy adventures! Happy birthday!
+            
                 </div>
             </div>
         </div>

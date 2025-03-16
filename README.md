@@ -210,7 +210,6 @@
             height: 100%;
             background-color: rgba(0,0,0,0.8);
             z-index: 100; 
-            display: flex;
             justify-content: center;
             align-items: center;
             opacity: 0;

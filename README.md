@@ -371,11 +371,6 @@ background-attachment: fixed; /* Image stays in place when scrolling */
     <div class="container">
         <h1>HAPPY BIRTHDAY AKANKSHA!🎉🎂💖</h1>
         <div class="birthday-message">   
-        On this special day, I just want to remind you how incredibly amazing you are. 
-        You bring so much joy, love, and light into my life, and I’m beyond grateful for you every single day.
-        May this year bring you endless happiness, success, and all the beautiful moments you deserve.
-        I promise to be by your side, celebrating you today and always.  
-        Here’s to more laughter, adventures, and unforgettable memories together! 🥂✨
         </div>
         
         <div id="countdown">Birthday Countdown: Loading...</div>
@@ -404,8 +399,11 @@ background-attachment: fixed; /* Image stays in place when scrolling */
         
         <div class="gift-box" id="giftBox"></div>
         <div class="gift-message" id="giftMessage">
-            Dear Akanksha, may your birthday be as beautiful and special as you are! 
-            Here's to another amazing year of your life! 🎉
+            Dear Akanksha, On this special day, I just want to remind you how incredibly amazing you are. 
+        You bring so much joy, love, and light into my life, and I’m beyond grateful for you every single day.
+        May this year bring you endless happiness, success, and all the beautiful moments you deserve.
+        I promise to be by your side, celebrating you today and always.  
+        Here’s to more laughter, adventures, and unforgettable memories together! 🥂✨
         </div>
         
         <button class="btn" id="playBtn">Play Birthday Song</button>

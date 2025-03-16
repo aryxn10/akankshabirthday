@@ -371,13 +371,24 @@
 
         function closeMemory() {
             document.getElementById('memoryContainer').classList.remove('active');
-        }
-
+        } 
         // Play Birthday Song
         document.getElementById('playBtn').addEventListener('click', function() {
-            const song = document.getElementById('birthdaySong');
-            song.play();
+        const song = document.getElementById('birthdaySong');
+        
+        // Add error handling
+    song.onerror = function() {
+        alert("Sorry, there was an error playing the birthday song.");
+    };
+    
+    // Try to play the song
+    song.play()
+        .then(() => console.log("Birthday song playing"))
+        .catch(error => {
+            console.error("Error playing song:", error);
+            alert("Could not play the birthday song. Please try again or check if audio is enabled.");
         });
+});
         
         // Flame blow effect
         document.getElementById('flame').addEventListener('click', function() {

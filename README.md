@@ -386,6 +386,16 @@
             const song = document.getElementById('birthdaySong');
             song.play();
         });
+        
+        // Flame blow effect
+        document.getElementById('flame').addEventListener('click', function() {
+    const blowSound = document.getElementById('blowSound');
+    blowSound.play();
+    this.style.opacity = 0;
+    setTimeout(() => {
+        this.style.opacity = 1;
+    }, 3000);
+    });
 
         // More Confetti
         document.getElementById('moreBtn').addEventListener('click', function() {
